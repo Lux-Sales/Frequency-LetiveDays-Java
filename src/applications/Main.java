@@ -24,8 +24,9 @@ public class Main {
 			Date end = sdf.parse(sc.next());
 			Semester semester = new Semester(begin, end);
 			System.out.println();
-			System.out.println("Useful days:" + semester.usefulDays(begin, end));
 			System.out.println("Letive days:" + semester.letiveDays(begin, end));
+			System.out.println("Useful days:" + semester.usefulDays(begin, end));
+			System.out.println("Classes you may miss:" + semester.abscences(semester.usefulDays(begin, end)));
 			
 
 		} catch (ParseException e) {
