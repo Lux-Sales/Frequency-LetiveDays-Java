@@ -12,20 +12,6 @@ import entities.Semester;;
 public class Main {
 
 	public static void main(String[] args) throws java.text.ParseException {
-		
-		 /* SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy"); 
-		  Date now = sdf.parse("31/10/2019"); 
-		  Calendar cal = Calendar.getInstance();
-		  cal.setTime(now); 
-		  cal.add(cal.DATE, 1); 
-		  if(cal.get(Calendar.DAY_OF_WEEK) == 1) 
-		  { 
-			  System.out.println("deu certo"); 
-		  } 
-		  else {
-		 System.out.println(cal.getTime()); 
-		 }*/
-		 
 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the semester's begin date(dd/MM/yyyy): ");
