@@ -1,30 +1,54 @@
 package applications;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
+import com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException;
 
-import entities.Semester;
+import entities.Semester;;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws java.text.ParseException {
+		
+		 /* SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy"); 
+		  Date now = sdf.parse("31/10/2019"); 
+		  Calendar cal = Calendar.getInstance();
+		  cal.setTime(now); 
+		  cal.add(cal.DATE, 1); 
+		  if(cal.get(Calendar.DAY_OF_WEEK) == 1) 
+		  { 
+			  System.out.println("deu certo"); 
+		  } 
+		  else {
+		 System.out.println(cal.getTime()); 
+		 }*/
+		 
+
 		Scanner sc = new Scanner(System.in);
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		System.out.println("Enter the semester's begin date(dd/MM/yyyy): ");
-		try{
-		Date begin = sdf.parse(sc.next());
-		System.out.println("Enter the semester's end date(dd/MM/yyyy): ");
-		Date end = sdf.parse(sc.next());
-		Semester semester = new Semester(begin, end);
-	    System.out.println("Letive days:" + semester.letiveDays(begin, end));
-		}
-		catch(ParseException e) {
+		try {
+			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			Date begin = sdf.parse(sc.next());
+			Calendar cal = Calendar.getInstance();
+			cal.setTime(begin);
+			System.out.println("Enter the semester's end date(dd/MM/yyyy): ");
+			Date end = sdf.parse(sc.next());
+			Semester semester = new Semester(begin, end);
+			System.out.println();
+			System.out.println("Useful days:" + semester.usefulDays(begin, end));
+			System.out.println("Letive days:" + semester.letiveDays(begin, end));
+			
+
+		} catch (ParseException e) {
 			System.out.println("Error in date: " + e.getMessage());
-		}
-		finally {
+		} catch (java.text.ParseException e) {
+
+			System.out.println("Error in date: " + e.getMessage());
+		} finally {
+
 			sc.close();
 		}
 	}
