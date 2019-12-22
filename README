@@ -1,3 +1,7 @@
 This project will be a calculator that will calc, the letive days and the number of classes the student may miss according the 
 University of Brasília abscence policy, which determines that the student has to have 75% presence in classroom.
 The calculator isn't perfectly, since there are exception, as strikes, abscence of professors, and others.
+
+What i have to do:
+The user will enter the week days he have class, like monday,tuesday etc.
+And the program will calc the number of abscences he has in the that especificaly subject.

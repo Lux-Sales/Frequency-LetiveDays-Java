@@ -50,6 +50,7 @@ public class Semester {
 			if (cal.get(Calendar.DAY_OF_WEEK) == 1 || cal.get(Calendar.DAY_OF_WEEK) == 7) {
 				cal.add(cal.DATE, 1);
 			} else {
+
 				usefulDays++;
 				cal.add(cal.DATE, 1);
 			}
