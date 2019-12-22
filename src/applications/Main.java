@@ -26,8 +26,10 @@ public class Main {
 			System.out.println();
 			System.out.println("Letive days:" + semester.letiveDays(begin, end));
 			System.out.println("Useful days:" + semester.usefulDays(begin, end));
-			System.out.println("Classes you may miss:" + semester.abscences(semester.usefulDays(begin, end)));
-			
+			System.out.println("Classes you may miss:");
+			System.out.print("6 credits: " + semester.abscences(6) + "\n");
+			System.out.print("4 credits: " + semester.abscences(4) + "\n");
+			System.out.print("2 credits :" + semester.abscences(2) + "\n");
 
 		} catch (ParseException e) {
 			System.out.println("Error in date: " + e.getMessage());

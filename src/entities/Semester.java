@@ -60,11 +60,11 @@ public class Semester {
 		return usefulDays;
 	}
 	
-	public long abscences(long bol) {
-		return (25 * bol)/100;
+	public int abscences(int cred) {
+		int d = usefulDays(begin, end);
+		return (((d/5)*(cred/2))*25/100);
+		
 	}
-	public long presence(long bol) {
-		return (75*bol)/100;
-	}
+	
 
 }
