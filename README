@@ -1,4 +1,4 @@
-This project is a calculator that will calc, the letive days, the useful days, and the number of classes the student may miss 
+This project is a calculator that calc, the letive days, the useful days, and the number of classes the student may miss 
 according the University of Brasília abscence policy, which determines that the student has to have 75% presence in classroom.
 The number of abscencs is calculated by the number of classes ministreds, which is 25% of it.
 The calculator isn't perfectly, since there are exception, as strikes, abscence of professors, and others.
